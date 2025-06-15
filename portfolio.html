@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Mara Đurica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-light: #fdfcfa;
+      --text-light: #1a1a1a;
+      --bg-dark: #0d0d0d;
+      --text-dark: #f2f2f2;
+      --accent: #e63946;
+      --hover: #f4a261;
+      --card-bg-light: #fff;
+      --card-bg-dark: #1a1a1a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+      transition: background-color 0.3s ease, color 0.3s ease;
+      padding: 2rem;
+      line-height: 1.7;
+    }
+
+    body.light-mode {
+      background-color: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      margin-right: 2rem;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--hover);
+    }
+
+    .mode-toggle, .lang-toggle {
+      background: none;
+      border: none;
+      color: var(--accent);
+      cursor: pointer;
+      font-size: 1rem;
+      margin-left: 1rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      max-width: 800px;
+      margin: 0 auto;
+      color: #aaa;
+      font-size: 1.1rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .gallery-item {
+      background-color: var(--card-bg-dark);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    body.light-mode .gallery-item {
+      background-color: var(--card-bg-light);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.02);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      display: block;
+    }
+
+    .gallery-item p {
+      padding: 1rem;
+      font-size: 1rem;
+      color: inherit;
+    }
+
+    #kontakt p {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 5rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--hover);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-links">
+      <a href="#pocetna">Početna</a>
+      <a href="#radovi">Radovi</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+    <div>
+      <button class="mode-toggle" onclick="toggleMode()">🌙/☀️</button>
+      <button class="lang-toggle" onclick="toggleLang()">HR/EN</button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="pocetna">
+      <header>
+        <h1 id="ime">Mara Đurica</h1>
+        <p id="opis">
+          Grafička dizajnerica i studentica 3. godine prijediplomskog studija Grafičkog fakulteta u Zagrebu, smjer Dizajn grafičkih proizvoda, sa strašću za suvremeni vizualni izričaj. Fokusirana na stvaranje jedinstvenih, estetski uravnoteženih i funkcionalnih dizajnerskih rješenja.
+        </p>
+      </header>
+    </section>
+
+    <section id="radovi">
+      <h2>Radovi</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="/Users/mara.durica/Desktop/zekoeko-logo-novi.png" alt="Naziv rada 1" />
+          <p>Dizajn vizualnog identiteta za stolnu igru ZekoEko – Logo</p>
+        </div>
+        <div class="gallery-item">
+          <img src="/Users/mara.durica/Desktop/portfolio/plocarender5.png" alt="Naziv rada 2" />
+          <p>Dizajn vizualnog identiteta za stolnu igru ZekoEko – ploča za igru</p>
+        </div>
+        <div class="gallery-item">
+          <img src="putanja/do/tvoje-slike2.jpg" alt="Naziv rada 3" />
+          <p>Dizajn vizualnog identiteta za stolnu igru ZekoEko – žetoni i karte za igru</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+      <p>Email: <a href="mailto:mara.durica@gmail.com">mara.durica@gmail.com</a></p>
+      <p>Tel: <a href="tel:+385913028205">+385 913028205</a></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Mara Đurica
+  </footer>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('light-mode');
+    }
+
+    function toggleLang() {
+      const lang = document.documentElement.lang;
+      if (lang === "hr") {
+        document.documentElement.lang = "en";
+        document.getElementById("ime").innerText = "Mara Đurica";
+        document.getElementById("opis").innerText = "Graphic designer and 3rd year undergraduate student at the Faculty of Graphic Arts in Zagreb, majoring in Graphic Product Design, with a passion for contemporary visual expression. Focused on creating unique, aesthetically balanced and functional design solutions.";
+        document.querySelectorAll(".nav-links a")[0].innerText = "Home";
+        document.querySelectorAll(".nav-links a")[1].innerText = "Works";
+        document.querySelectorAll(".nav-links a")[2].innerText = "Contact";
+        document.querySelector("#radovi h2").innerText = "Works";
+        document.querySelector("#kontakt h2").innerText = "Contact";
+      } else {
+        document.documentElement.lang = "hr";
+        document.getElementById("ime").innerText = "Mara Đurica";
+        document.getElementById("opis").innerText = "Grafička dizajnerica i studentica 3. godine prijediplomskog studija Grafičkog fakulteta u Zagrebu, smjer Dizajn grafičkih proizvoda, sa strašću za suvremeni vizualni izričaj. Fokusirana na stvaranje jedinstvenih, estetski uravnoteženih i funkcionalnih dizajnerskih rješenja.";
+        document.querySelectorAll(".nav-links a")[0].innerText = "Početna";
+        document.querySelectorAll(".nav-links a")[1].innerText = "Radovi";
+        document.querySelectorAll(".nav-links a")[2].innerText = "Kontakt";
+        document.querySelector("#radovi h2").innerText = "Radovi";
+        document.querySelector("#kontakt h2").innerText = "Kontakt";
+      }
+    }
+  </script>
+</body>
+</html>
