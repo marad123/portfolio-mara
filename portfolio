@@ -181,15 +181,15 @@
       <h2>Radovi</h2>
       <div class="gallery">
         <div class="gallery-item">
-          <img src="/Users/mara.durica/Desktop/zekoeko-logo-novi.png" alt="Naziv rada 1" />
+          <img src="zekoeko-logo-novi.png" alt="Naziv rada 1" />
           <p>Dizajn vizualnog identiteta za stolnu igru ZekoEko – Logo</p>
         </div>
         <div class="gallery-item">
-          <img src="/Users/mara.durica/Desktop/portfolio/plocarender5.png" alt="Naziv rada 2" />
+          <img src="plocarender5.png" alt="Naziv rada 2" />
           <p>Dizajn vizualnog identiteta za stolnu igru ZekoEko – ploča za igru</p>
         </div>
         <div class="gallery-item">
-          <img src="putanja/do/tvoje-slike2.jpg" alt="Naziv rada 3" />
+          <img src="plikizetoni2.jpg" alt="Naziv rada 3" />
           <p>Dizajn vizualnog identiteta za stolnu igru ZekoEko – žetoni i karte za igru</p>
         </div>
       </div>
